@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 411378552}
   - component: {fileID: 411378551}
   m_Layer: 5
-  m_Name: Title
+  m_Name: MainMenuTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,12 +151,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 481710393}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0013428, y: -116}
-  m_SizeDelta: {x: 917.0953, y: 168.2435}
+  m_AnchoredPosition: {x: -0.000046287, y: -125.5}
+  m_SizeDelta: {x: 917.0981, y: 149.2413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411378551
 MonoBehaviour:
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 68.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -344,8 +344,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1309094552}
   - {fileID: 411378550}
+  - {fileID: 1706510047}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -437,7 +437,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1309094551
+--- !u!1 &1706510046
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -445,36 +445,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1309094552}
-  - component: {fileID: 1309094553}
-  m_Layer: 0
-  m_Name: witch_main_manu_background
+  - component: {fileID: 1706510047}
+  - component: {fileID: 1706510048}
+  m_Layer: 5
+  m_Name: WitchImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1309094552
-Transform:
+--- !u!224 &1706510047
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309094551}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 276.5, y: 0.1, z: 0}
-  m_LocalScale: {x: 34.5201, y: 34.5201, z: 0.5849112}
+  m_GameObject: {fileID: 1706510046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 35, y: 35, z: 1}
   m_Children: []
   m_Father: {fileID: 481710393}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1309094553
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -184, y: 209.15}
+  m_SizeDelta: {x: 10.513073, y: 11.95166}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!212 &1706510048
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309094551}
+  m_GameObject: {fileID: 1706510046}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
