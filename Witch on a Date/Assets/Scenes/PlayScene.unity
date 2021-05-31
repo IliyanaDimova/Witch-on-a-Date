@@ -768,6 +768,7 @@ GameObject:
   - component: {fileID: 910241870}
   - component: {fileID: 910241869}
   - component: {fileID: 910241868}
+  - component: {fileID: 910241871}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -841,6 +842,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &910241871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910241867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a179a29c60a04f4c9528a3ce5e8abda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1906489663}
+  offset: {x: 0, y: 0, z: -10}
 --- !u!1 &1220003979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,6 +1469,8 @@ GameObject:
   - component: {fileID: 1906489662}
   - component: {fileID: 1906489661}
   - component: {fileID: 1906489664}
+  - component: {fileID: 1906489665}
+  - component: {fileID: 1906489666}
   m_Layer: 0
   m_Name: witchPlayer
   m_TagString: Untagged
@@ -1570,6 +1587,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.384937, y: 2.6927674}
   m_EdgeRadius: 0
+--- !u!114 &1906489665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906489660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7abed2b8a70b65347a9bf58adcc2339e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  rb: {fileID: 1906489666}
+--- !u!50 &1906489666
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906489660}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2000789575
 GameObject:
   m_ObjectHideFlags: 0
