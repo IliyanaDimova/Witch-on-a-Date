@@ -16,8 +16,7 @@ public class Parallax : MonoBehaviour
         length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
-    // Как ще се променя картината на Fixed Update (Застопорено обновяване)
-    void FixedUpdate()
+    void Update()
     {
         float temp = (cam.transform.position.x * (1 - parallaxEffect)); // temp е колко далеко съм пътувала спрямо (релативно на) камерата
         float dist = (cam.transform.position.x * parallaxEffect); // dist е колко далеко съм стигнала в пространството на играта
