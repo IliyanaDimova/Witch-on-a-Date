@@ -6,11 +6,16 @@ public class CameraFollow : MonoBehaviour
     public Vector3 offset; // отгалечаване от целта
     private Vector3 targetWithoutY; // позицията на target, но винаги е 0 по Y кординатата
 
-    // PROBA
+    /*// PROBA
+    // Координата Х за началото на екрана
+    private float xMax;
     void Start()
     {
-        offset.x = 0f;
-    }
+        // Вземам главната камера
+        Camera camera = Camera.main;
+        xMax = camera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+        offset.x = xMax - 2;
+    }*/
 
     void FixedUpdate()
     {

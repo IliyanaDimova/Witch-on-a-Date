@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayScene.unity
     guid: 218a578707cbe574a810e8a6e42728c8
+  - enabled: 1
+    path: Assets/Scenes/PotionMix.unity
+    guid: ece676b83f3dc2140923cf68fae14516
   m_configObjects: {}

@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     // Пази информация за докосване по екрана
     private Vector3 touchPos;
 
-    // PROBA ------------------------------------------------------
     // Ограничения по У за да стои винаги в рамките на екрана
     private float yMin, yMax; 
 
@@ -22,7 +21,6 @@ public class Player : MonoBehaviour
         yMin = camera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
         yMax = camera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;
     }
-    // KRAJ PROBA --------------------------------------------------
 
     // Тук ще приемам Input сигналите 
     void Update()
@@ -39,20 +37,19 @@ public class Player : MonoBehaviour
     // Проверява дали играча е в рамките на екрана
     bool PlayerOnScreen()
     {
-        Vector3 touch = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
-
         // Ако играча е в рамките на екрана по У => връща true 
         // (=/- 1.5 за да не излиза изображението наполовина извън екрана)
         if ((rb.position.y > yMin + 1.5) && (rb.position.y < yMax-1.5))
             return true;
         // Ако играча е стигнал долния ъгъл на екрана, но юзъра е натиснал екрана за да го качи нагоре
-        if ((rb.position.y <= yMin + 1.5) && (touch.y > 0))
+        if ((rb.position.y <= yMin + 1.5) && (touchPos.y > 0))
             return true;
         // Ако играча е стигнал горния ъгъл на екрана, но юзъра е натиснал екрана за да го свали надолу
-        if ((rb.position.y >= yMax - 1.5) && (touch.y < 0))
+        if ((rb.position.y >= yMax - 1.5) && (touchPos.y < 0))
             return true;
-        else
-            return false;
+        
+        // Ако играча е извън допустимите граници и няма User Input
+        return false;
     }
 
     // Проверява дали има докосване по екрана
@@ -62,7 +59,7 @@ public class Player : MonoBehaviour
         movement.x = moveSpeed;
 
         // Ако има докосване 
-        if (Input.GetMouseButton(0) && PlayerOnScreen()) 
+        if (Input.GetMouseButton(0)) 
         {
             // Съхранявам информацията за първото докосване по екрана
             touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
@@ -80,13 +77,13 @@ public class Player : MonoBehaviour
     // Премества играча чрез докосване по екрана
     void Movement()
     {
-        // Aко докосвам горната част на екрана
-        if (touchPos.y > 0) 
+        // Aко докосвам горната част на екрана и играча е в рамките на екрана
+        if (touchPos.y > 0 && PlayerOnScreen()) 
         {
             transform.Translate((moveSpeed * Time.fixedDeltaTime) * moveSpeed, (moveSpeed * Time.fixedDeltaTime), 0);
         }
-        // Aко докосвам долната
-        else if (touchPos.y < 0)
+        // Aко докосвам долната част и играча е в рамките на екрана
+        else if (touchPos.y < 0 && PlayerOnScreen())
         {
             transform.Translate((moveSpeed * Time.fixedDeltaTime) * moveSpeed, -(moveSpeed * Time.fixedDeltaTime), 0);
         }
