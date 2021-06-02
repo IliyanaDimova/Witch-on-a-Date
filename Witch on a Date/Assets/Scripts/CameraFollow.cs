@@ -7,14 +7,16 @@ public class CameraFollow : MonoBehaviour
     private Vector3 targetWithoutY; // позицията на target, но винаги е 0 по Y кординатата
 
     /*// PROBA
-    // Координата Х за началото на екрана
-    private float xMax;
+    // Премести играча напред ако не се вижда
     void Start()
     {
         // Вземам главната камера
         Camera camera = Camera.main;
-        xMax = camera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
-        offset.x = xMax - 2;
+        float xMax = camera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+
+        if (target.position.x >= xMax - 2.5)
+        offset.x += 1;
+        Debug.Log("offset.x: " + target.position.x);
     }*/
 
     void FixedUpdate()

@@ -954,7 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1906489663}
-  offset: {x: 0, y: 0, z: -10}
+  offset: {x: 8, y: 0, z: -10}
 --- !u!1 &1112212022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,7 +1712,7 @@ GameObject:
   - component: {fileID: 1906489665}
   - component: {fileID: 1906489666}
   m_Layer: 0
-  m_Name: witchPlayer
+  m_Name: witchPlayer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1839,7 +1839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7abed2b8a70b65347a9bf58adcc2339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3.5
+  moveSpeed: 4
   rb: {fileID: 1906489666}
 --- !u!50 &1906489666
 Rigidbody2D:
