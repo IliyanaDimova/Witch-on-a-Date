@@ -11,7 +11,7 @@ public class CountDownTimer : MonoBehaviour
     // Сегашно време
     float currentTime = 0f;
     // Начално време
-    float startingTime = 30f;
+    public float startingTime;
     // Текст за показване
     public Text countdownText;
 
@@ -31,6 +31,10 @@ public class CountDownTimer : MonoBehaviour
         // Ако времето изтече
         if(currentTime <= 0)
         {
+            // Пращам Score в новозаредената сцена
+            MixScoreManager.butterflyScore = ScoreManager.butterflyScore;
+            MixScoreManager.flowerScore = ScoreManager.flowerScore;
+            MixScoreManager.frogScore = ScoreManager.frogScore;
             // Зареждам сцената за забъркване на отвара
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
         }

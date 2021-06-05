@@ -34,27 +34,6 @@ public class Player : MonoBehaviour
         Movement();
     }
 
-    /*// Задейства се когато играча "докосне" чужд Collider
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        // Ако докоснатия обект е цвете
-        if (other.gameObject.CompareTag("flower"))
-        {
-            // Унищожи обекта
-            Destroy(other.gameObject);
-        }
-        // Ако докоснатия обект е жаба
-        if (other.gameObject.CompareTag("frog"))
-        {
-            Destroy(other.gameObject);
-        }
-        // Ако докоснатия обект е пеперуда
-        if (other.gameObject.CompareTag("butterfly"))
-        {
-            Destroy(other.gameObject);
-        }
-    }*/
-
     // Проверява дали играча е в рамките на екрана
     bool PlayerOnScreen()
     {
