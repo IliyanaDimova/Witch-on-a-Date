@@ -1,25 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-    // This function opens the SettingsScene when the SETTINGS button is clicked:
+    // Променлива в която сухранявам дали играта е със спрян звук
+    public static bool mute;
+
+    // Отваря сцената SettingsScene, когато бутонът SETTINGS е натиснат:
     public void openSettings()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Loads next scene with build number x+1
     }
 
-    // This function opens the playable game when the PLAY button is clicked:
+    // Отваря сцената PlayScene, когато бутонът PLAY е натиснат:
     public void openPlay()
     {
+        Sound.mute = mute;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2); // Loads next scene with build number x+2
     }
 
-    // This function opens the MainMenu when RETURN button is pressed:
-    public void openMainMenu()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); // Loads next scene with build number x-1
-    }
 }
