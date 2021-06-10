@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     // Текстът който ще се променя за брой събрани пеперуди, цветя и жаби
     public TextMeshProUGUI butterflyText, flowerText, frogText;
     // Брой събрани пеперуди, цветя и жаби
-    public static int butterflyScore = 0, flowerScore = 0, frogScore = 0;
+    public static int butterflyScore, flowerScore, frogScore;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,10 @@ public class ScoreManager : MonoBehaviour
         {
             instance = this;
         }
+        // Нулирам скора преди да започне играта
+        butterflyScore = 0;
+        flowerScore = 0;
+        frogScore = 0;
     }
 
     // Променя текста за брой събрани елементи
