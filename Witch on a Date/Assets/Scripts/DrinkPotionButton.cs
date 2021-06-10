@@ -7,6 +7,6 @@ public class DrinkPotionButton : MonoBehaviour
     public void drinkPotion()
     {
         // Отваря Result scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4); 
     }
 }

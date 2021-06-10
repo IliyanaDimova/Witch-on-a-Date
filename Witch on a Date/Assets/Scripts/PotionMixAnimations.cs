@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PotionMixAnimations : MonoBehaviour
 {
-    // Сегашно време
-    float currentTime = 0f;
+    // Падащо цвете, пеперуда или жаба, чиято позиция ще ми показва дали вече да 
+    // пусна Smoke анимацията или да покажа бутона Drink Potion
+    public Rigidbody2D starter;
     // Задавам вектор среда на екрана
     Vector3 temp1;
 
@@ -18,14 +18,14 @@ public class PotionMixAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Намалям времето с една секунда
-        currentTime += 1 * Time.deltaTime;
-
-        // Ако са изминали 6 секунди
-        if (currentTime >= 3 && currentTime <= 4)
+        // Ако starter е паднал на позиция под у = -14 и гравитацията му не се е нулирала (if-а не се е изпълнявал досега)
+        if (starter.position.y <= -14 && starter.gravityScale != 0)
         {
             // Показвам Smoke обекта, премествайки го на позиция (0, 0) което е средатата на екрана
             transform.position = temp1;
+
+            // Нулирам гравитацията на starter
+            starter.gravityScale = 0f;
         }
     }
 }
