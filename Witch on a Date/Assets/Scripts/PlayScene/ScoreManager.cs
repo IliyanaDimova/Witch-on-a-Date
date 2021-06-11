@@ -11,6 +11,11 @@ public class ScoreManager : MonoBehaviour
     // Брой събрани пеперуди, цветя и жаби
     public static int butterflyScore, flowerScore, frogScore;
 
+    // Звукът който ще се изпълнява
+    public AudioClip triggerSound;
+    // AudioSourc-а в ScoreManager
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +27,9 @@ public class ScoreManager : MonoBehaviour
         butterflyScore = 0;
         flowerScore = 0;
         frogScore = 0;
+
+        // Откривам AudioSourc-а в ScoreManager
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Променя текста за брой събрани елементи
@@ -46,5 +54,17 @@ public class ScoreManager : MonoBehaviour
             frogScore += 1;
             frogText.text = frogScore.ToString();
         }
+
+        // Изпълни звук на събиране на съставка ако играта не е заглушена
+        if (!Sound.mute)
+        {
+            playCollectSound();
+        }
+    }
+
+    // Изпълнява звука за събиране на съставка
+    void playCollectSound()
+    {
+        audioSource.PlayOneShot(triggerSound, 0.3F);
     }
 }
