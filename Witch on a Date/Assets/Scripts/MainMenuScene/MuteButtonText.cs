@@ -14,5 +14,9 @@ public class MuteButtonText : MonoBehaviour
             // Смени текста на бутона на UNMUTE
             changeText.text = "UNMUTE";
         }
+        else
+        {
+            changeText.text = "MUTE";
+        }
     }
 }

@@ -11,8 +11,10 @@ public class Player : MonoBehaviour
     // Пази информация за докосване по екрана
     private Vector3 touchPos;
 
+    private Vector2 p;
+
     // Ограничения по У за да стои винаги в рамките на екрана
-    private float yMin, yMax; 
+    private float yMin, yMax;
 
     void Start()
     {
@@ -77,17 +79,28 @@ public class Player : MonoBehaviour
     // Премества играча чрез докосване по екрана
     void Movement()
     {
-        // Aко докосвам горната част на екрана и играча е в рамките на екрана
-        if (touchPos.y > 0 && PlayerOnScreen()) 
+        // Ако екрана е докоснат и играча не е стигнал края на екрана
+        if (Input.GetMouseButton(0) && PlayerOnScreen())
         {
-            transform.Translate((moveSpeed * Time.fixedDeltaTime) * moveSpeed, (moveSpeed * Time.fixedDeltaTime), 0);
+            // Ако докосването е по-надолу от играча (-0.5 защото иначе играча трепти когато докосването и играча са на една линия)
+            if (touchPos.y < transform.position.y - 0.5)
+            {
+                // Движението по Х трябва да е * moveSpeed за да не се забавя движението по У
+                transform.Translate((moveSpeed * Time.fixedDeltaTime) * moveSpeed, -(moveSpeed * Time.fixedDeltaTime), 0);
+            }
+            // Ако докосването е по-надолу от играча (-0.5 защото иначе играча трепти когато докосването и играча са на една линия)
+            else if (touchPos.y > transform.position.y + 0.5)
+            {
+                transform.Translate((moveSpeed * Time.fixedDeltaTime) * moveSpeed, (moveSpeed * Time.fixedDeltaTime), 0);
+            }
+            // Този else е за когато играча е на една линия с докосването. Ако го няма играча спира да се движи когато са на една линия
+            else
+            { 
+                rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            }
         }
-        // Aко докосвам долната част и играча е в рамките на екрана
-        else if (touchPos.y < 0 && PlayerOnScreen())
-        {
-            transform.Translate((moveSpeed * Time.fixedDeltaTime) * moveSpeed, -(moveSpeed * Time.fixedDeltaTime), 0);
-        }
-        // Ако няма докосване
+        
+        // Ако няма докосване по екрана просто движа играча по У
         else
         {
             // Time.fixedDeltaTime запазва moveSpeed константно. Това прави движението гладко
