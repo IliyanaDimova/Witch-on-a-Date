@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "520058b34ec31579",
     "m_SelectedPackage": {
-        "deviceId": "520058b34ec31579",
-        "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 13386,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,74 +11,32 @@
         {
             "deviceId": "520058b34ec31579",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 16316,
-            "exited": true
-        },
-        {
-            "deviceId": "520058b34ec31579",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 32505,
-            "exited": true
-        },
-        {
-            "deviceId": "520058b34ec31579",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 4256,
-            "exited": true
-        },
-        {
-            "deviceId": "520058b34ec31579",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 22721,
-            "exited": true
-        },
-        {
-            "deviceId": "520058b34ec31579",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 22561,
-            "exited": true
-        },
-        {
-            "deviceId": "520058b34ec31579",
-            "name": "com.sec.android.app.launcher",
-            "processId": 8575,
-            "exited": false
-        },
-        {
-            "deviceId": "520058b34ec31579",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 1181,
-            "exited": false
-        },
-        {
-            "deviceId": "520058b34ec31579",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 23528,
-            "exited": false
-        },
-        {
-            "deviceId": "520058b34ec31579",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 14843,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "520058b34ec31579",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 32051,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "520058b34ec31579",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 8637,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "520058b34ec31579",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 13386,
-            "exited": false
+            "exited": true
+        },
+        {
+            "deviceId": "520058b34ec31579",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 4408,
+            "exited": true
         },
         {
             "deviceId": "R52R109JN4X",
