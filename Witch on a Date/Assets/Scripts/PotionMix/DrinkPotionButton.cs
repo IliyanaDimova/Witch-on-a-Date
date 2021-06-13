@@ -8,13 +8,13 @@ public class DrinkPotionButton : MonoBehaviour
     {
         Sound.mute = Sound.mute;
         // Ако има събрани 6 жаби, 3 цветя, 7 пеперуди
-        if (MixScoreManager.frogScore == 8 && MixScoreManager.butterflyScore == 1 && MixScoreManager.flowerScore == 3)
+        if (MixScoreManager.frogScore == 2 && MixScoreManager.butterflyScore == 1 && MixScoreManager.flowerScore == 3)
         {
             // Отваря Date сцена
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         // Ако в събраните съставки преобладават жаби
-        else if (MixScoreManager.frogScore > MixScoreManager.butterflyScore && MixScoreManager.frogScore > MixScoreManager.flowerScore)
+        else if (MixScoreManager.frogScore > MixScoreManager.butterflyScore && MixScoreManager.frogScore >= MixScoreManager.flowerScore)
         {
             // Отваря Frog Result сцена
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4); 
