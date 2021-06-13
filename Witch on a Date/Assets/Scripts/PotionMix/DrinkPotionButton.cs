@@ -25,6 +25,12 @@ public class DrinkPotionButton : MonoBehaviour
             // Отваря Flower Result сцена
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
         }
+        // Ако няма никакви събрани съставки
+        else if (MixScoreManager.flowerScore == 0 && MixScoreManager.frogScore == 0 && MixScoreManager.butterflyScore == 0)
+        {
+            // Отваря TrueDate сцената
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 5);
+        }
         // Всички други случаи
         else
         {

@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ResultScenes/FrogResult.unity
     guid: bc40b6c081fda8d4a8046477a72d0e0e
+  - enabled: 1
+    path: Assets/Scenes/ResultScenes/TrueDate.unity
+    guid: eb4b17588128bb6448db8cdfaa2e6444
   m_configObjects: {}
