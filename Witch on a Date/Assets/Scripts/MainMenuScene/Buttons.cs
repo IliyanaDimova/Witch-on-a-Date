@@ -9,6 +9,20 @@ public class Buttons : MonoBehaviour
     // Текста на Mute бутона
     public TextMeshProUGUI changeText;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (mute)
+        {
+            // Смени текста на бутона на UNMUTE
+            changeText.text = "UNMUTE";
+        }
+        else
+        {
+            changeText.text = "MUTE";
+        }
+    }
+
     // Спира звука на играта
     public void muteGame()
     {

@@ -6,7 +6,6 @@ public class DrinkPotionButton : MonoBehaviour
     // Start is called before the first frame update
     public void drinkPotion()
     {
-        Sound.mute = Sound.mute;
         // Ако има събрани 6 жаби, 3 цветя, 7 пеперуди
         if (MixScoreManager.frogScore == 2 && MixScoreManager.butterflyScore == 1 && MixScoreManager.flowerScore == 3)
         {

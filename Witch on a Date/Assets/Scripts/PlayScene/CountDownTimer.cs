@@ -35,8 +35,6 @@ public class CountDownTimer : MonoBehaviour
             MixScoreManager.butterflyScore = ScoreManager.butterflyScore;
             MixScoreManager.flowerScore = ScoreManager.flowerScore;
             MixScoreManager.frogScore = ScoreManager.frogScore;
-            // Пращам променливата за заглушаване на звука в играта към новозаредената сцена
-            Sound.mute = Sound.mute;
             // Зареждам сцената за забъркване на отвара
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
         }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
@@ -18,11 +16,16 @@ public class Parallax : MonoBehaviour
 
     void Update()
     {
-        float temp = (cam.transform.position.x * (1 - parallaxEffect)); // temp е колко далеко съм пътувала спрямо (релативно на) камерата
-        float dist = (cam.transform.position.x * parallaxEffect); // dist е колко далеко съм стигнала в пространството на играта
+        // temp е колко далеко съм пътувала спрямо (релативно на) камерата
+        float temp = (cam.transform.position.x * (1 - parallaxEffect));
 
+        // dist е колко далеко съм стигнала в пространството на играта
+        float dist = (cam.transform.position.x * parallaxEffect); 
+
+        // Променяне на позицията
         transform.position = new Vector3(startpos + dist, transform.position.y, transform.position.z);
 
+        // Повторение на картинките за напред и назад
         if (temp > startpos + length) startpos += length;
         else if (temp < startpos - length) startpos -= length;
     }
